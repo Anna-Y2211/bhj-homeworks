@@ -3,10 +3,15 @@ const moleDead = document.getElementById('dead');
 const moleLost = document.getElementById('lost');
 
 function winner() {
-    if (moleDead == 10) {
+    if (moleDead.textContent == 10) {
         alert("Вы победили!");
-    } else if (moleLost == 5) {
+        moleDead.textContent = 0;
+        moleLost.textContent = 0;
+    } else if (moleLost.textContent == 5) {
         alert("Вы приграли!");
+        moleDead.textContent = 0;
+        moleLost.textContent = 0;
+
     }
 }
 
