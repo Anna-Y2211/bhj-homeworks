@@ -18,18 +18,13 @@ class Game {
 
   registerEvents() {
     document.addEventListener('keyup', (e) => {
-      this.onKeyUp(e.key)
-  });
-    onKeyUp(key) {
-      const symbol = this.currentSymbol,
-      keyChar = symbol.textContent.toLowerCase(),
-      char = key.toLowerCase();
-      if(keyChar === char) {
-        this.success();
+      const userSymbol = e.key.toLowerCase();
+      if (this.currentSymbol.textContent.toLowerCase() == userSymbol) {
+        this.success()
       } else {
         this.fail();
       }
-    }
+    });
   }
     
 
