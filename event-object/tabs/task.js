@@ -1,10 +1,14 @@
 const tabs = document.querySelectorAll('.tab');
-const tabsContent = document.querySelectorAll('.tab__content')
+const tabsContent = Array.from(document.querySelectorAll('.tab__contents'));
+const tabActive = document.querySelector('.tab_active');
 
-tabs.addEventListener('click', () => {
-	tabs.findIndex('tab_active');
-	tabs.classList.remove('tab_active');
-	tabs.classList.add('tab_active');
-	tabsContent.classList.remove('tab__content_active');
-	tabsContent.classList.add('tab__content_active');
+tabActive.addEventListener('click', () => {
+	const findTabs = tabs.findIndex((tab) => {
+		tabs.classList.remove(findTabs);
+		tabs.classList.add('tab_active');
+		tabsContent.classList.remove('tab__content_active');
+		tabsContent.classList.add('tab__content_active');
 })
+})
+
+	
