@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll('.tab');
+const tabs = Array.from(document.querySelectorAll('.tab'));
 const tabsContent = Array.from(document.querySelectorAll('.tab__contents'));
 const tabActive = document.querySelector('.tab_active');
 
