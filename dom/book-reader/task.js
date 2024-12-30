@@ -3,6 +3,9 @@ const fontSize = Array.from(document.querySelectorAll('.font-size'));
 
 fontSize.forEach((el) => {
     el.addEventListener('click', (e) => {
-        e.classList.add('.font-size_active')
+        fontSize.forEach((element) => {
+        e.classList.remove('.font-size_active');
+     })
+     el.classList.add('rotator__case_active')
     })
 })
