@@ -8,10 +8,10 @@ const clickFont = (event) => {
     })
     const currentElement = event.target;
     currentElement.classList.add('font-size_active');
-    book.classList.remove('font-size_small', 'font-size_big');
+    book.classList.remove('book_fs-small', 'book_fs-big');
     const size = currentElement.dataset.size;
     if(size) {
-        book.classList.add(`font-size-${size}`);
+        book.classList.add(`book_fs-${size}`);
     }
 };
 fontSize.forEach((element) => {
