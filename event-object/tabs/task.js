@@ -9,7 +9,6 @@ tabs.forEach(tab => {
   
 	  tabActive.classList.remove('tab_active');
 	  tabActive.classList.add('tab_active');
-	  tabActive = tab;
   
 	  activeContent.classList.remove('tab__content_active');
 	  activeContent = tabsContent[indexTab];
