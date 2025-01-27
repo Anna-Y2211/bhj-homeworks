@@ -5,10 +5,12 @@ hasTooltip.forEach((el) => {
   newDiv.textContent = String(el.title);
   newDiv.classList.add('tooltip');
   el.appendChild(newDiv);
+  const eCoordinat = el.getBoundingClientRect();
+  let left = Math.round(eCoordinat.left)
   el.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log(newDiv);
     newDiv.classList.toggle('tooltip_active');
+   newDiv.style.cssText = `left: ${left}px`
     
   })
  
