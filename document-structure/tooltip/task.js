@@ -10,7 +10,7 @@ hasTooltip.forEach((el) => {
   el.addEventListener('click', (e) => {
     e.preventDefault();
     newDiv.classList.toggle('tooltip_active');
-   newDiv.style.cssText = `left: ${left}px`
+    newDiv.style.cssText = `left: ${left}px`
     
   })
  
