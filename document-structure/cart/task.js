@@ -7,23 +7,32 @@ const productAdd = document.querySelectorAll('.product__add');
 const productImg = document.querySelectorAll('.product__image');
 const productCard = Array.from(document.querySelectorAll('.cart__product'));
 const count = document.querySelector('.cart__product-count');
+const dataId = document.querySelectorAll('[data-id]')
 
+//productControl.forEach((control) => {
 
-productControl.forEach((control) => {
-  control.productDec;
-  control.productInc;
-  control.productValue;
   
-  productInc.addEventListener('click', () => {
-    productValue.textContent++;
-  })
-})
+  //productInc.addEventListener('click', () => {
+    //productValue.textContent++;
+  //})
+//})
 products.forEach((element) => {
-  const dataId = element.getAttribute('data-id');
+  productInc.addEventListener('click', () => {
+      productValue.textContent++
+    
+     
+  })
+  productDec.addEventListener('click', () => {
+    //const dataId = document.querySelectorAll('[data-id]')
+ 
+     if(productValue.textContent > 1 ) {
+      productValue.textContent--
+    
+  }
+  
+  //const dataId = element.getAttribute('data-id');
   const productSrc = element.getAttribute('src');
-  element.productAdd;
-  element.productImg;
-  element.productValue;
+ 
   
  productAdd.addEventListener('click', () => {
    const newDiv = document.createElement('div');
@@ -33,4 +42,5 @@ products.forEach((element) => {
 </div>`
  }) 
   
+})
 })
