@@ -6,15 +6,10 @@ const activeContent = document.querySelector('.tab__content_active');
 
 tabs.forEach((tab) => {
   tab.addEventListener('click', (e) => {
-  let indexTab = tabs.findIndex((tabActive) => {
-  tabActive.classList.remove('tab_active');
-  tab.classList.add('tab_active') 
-   
-    tabActive.classList.remove('tab__content_active')
-    tab.classList.add('tab__content_active')
-    
+   const indexTab = tabs.findIndex((element) => element == tabActive)
+       tab.classList.remove('tab_active')
+       indexTab.classList.add('tab_active')
     
 })
   
 })
-})  
